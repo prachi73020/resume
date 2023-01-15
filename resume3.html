@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive CV using Html & CSS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZplmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css?family=poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'poppins',sans-serif;
+
+}
+body{
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+}
+.container
+{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background: #fff;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0,0,0,0,0.1);
+}
+.container .left_side
+{
+    position: relative;
+    background-color: #003147;
+    padding: 40px;
+}
+.profileText
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.profileText .imgBx
+{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profileText .imgBx img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+.profileText h2
+{
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight:600;
+    line-height: 1.4em;
+}
+.profileText h2 span
+{
+    font-size: 0.8em;
+    font-weight: 300;
+}
+.contactinfo
+{
+    padding-top: 40px;
+}
+.title
+{
+    color:#fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.contactinfo ul
+{
+    position: relative;
+}
+.contactinfo ul li
+{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor:pointer;
+}
+.contactinfo ul li .icon
+{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #03a9f4;
+}
+.contactinfo ul li span
+{
+    color: #fff;
+    font-weight: 300;
+}
+.contactinfo.education li
+{
+    margin-bottom: 15px;
+}
+.contactinfo.education h5
+{
+    color: #03a9f4;
+    font-weight: 500;
+}
+.contactinfo.education h4
+{
+    color: #fff;
+    font-weight: 500;
+}
+.contactinfo.languages .percent
+{
+    position:relative;
+    width: 100%;
+    height: 6px;
+    background: black;
+    display: block;
+    margin-top: 5px;
+}
+.contactinfo.languages .percent div
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+.container .right_side
+{
+    position: relative;
+    background-color: #fff;
+    padding: 40px;
+}
+.about
+{
+    margin-bottom: 50px;
+}
+.about:last-child
+{
+    margin-bottom: 0;
+}
+.title2
+{
+    color: #003147;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10 px;
+}
+p
+{
+    color: #333;
+}
+.Skills.box
+{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+    
+}
+.about .box
+{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+.Skills .box
+{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+    
+}
+.ProfessionalSkills .box h4
+{
+    text-transform: uppercase;
+    color: #848c99;
+    font-weight: 500;
+}
+.ProfessionalSkills .box .percent
+{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #03a9f4;
+}
+.Skills .box .percent div
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+.Interests ul
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.Interests ul li
+{
+
+    color: #333;
+    font-weight: 500;
+    margin: 10px 0;
+}
+.Interests ul li .fa
+{
+    color: #03a9f4;
+    font-size: 18px;
+    width: 20px;
+}
+.Proffesional Summary 
+{
+    margin: 20px;
+}
+</style>
+
+<body>
+    <div class="container">
+        <div class="left_side">
+            <div class="tanya.jpg">
+            </div>
+            <h2>PRACHI SHARMA<br><span>Web Developer</span></h2>
+
+            <div class="contactinfo">
+                <h3 class="title">contact info</h3>
+                <ul>
+                    <li>
+                        <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                        <span class="text">+91 7302063250</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                        <span class="text">prachisharma73020@gmail.com</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-globe" aria-hidden="true"></i></span>
+                        <span class="text">www.mywebsite.com</span>
+                    </li>
+                   
+                    <li>
+                        <span class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                        <span class="text">Aligarh,Uttar Pradesh,India</span>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="contactinfo education">
+                <h3 class="title">Education</h3>
+                <ul>
+                    <li>
+                        <h5>2017</h5>
+                        <h4>Intermediate</h4>
+                        <h4>T.R Girls Inter College</h4>
+                    </li>
+                    <li>
+                        <h5>2018-2022</h5>
+                        <h4>Bachelor in BCA</h4>
+                        <h4>D.s.college,Aligarh</h4>
+                    </li>
+                    <li>
+                        <h5>2022-2024</h5>
+                        <h4>Masters in MCA</h4>
+                        <h4>KIET Group of Institutions,Ghaziabad</h4>
+                    </li>
+                </ul>
+            </div>
+            <div class="contactinfo languages">
+                <h3 class="title">Languages</h3>
+                <ul>
+                    <li>
+                        <span class="text">English </span>
+                        <span class="percent"></span>
+                        <div style="width: 90%;"></div>
+                    </li>
+                    <li>
+                        <span class="text">Hindi </span>
+                        <span class="percent"></span>
+                        <div style="width: 95%;"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right_side">
+            <div class="about">
+                <h2 class="title2">Profile</h2>
+                <p>Looking to utilize my technology and leadership skills in an esteemed organization. Well versed with
+                    research-oriented marketing abilities and product analysis. Tech-savvy and a fast learner with
+                    innate
+                    communication skills and natural curiosity for projects.</p>
+            </div>
+            <div class="about">
+                <h2 class="title2">Skills</h2>
+                <ul>
+                    <li>
+                        <span class="text">Team player</span>
+                    </li>
+                    <li>
+                        <span class="text">Positive Attitude</span>
+                    </li>
+                    <li>
+                        <span class="text">Time management</span>
+                    </li>
+                    <li>
+                        <span class="text">Problem solving and hard working</span>
+                    </li>
+                    <li>
+                        <span class="text">Good communication skills</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="about">
+                <h2 class="title2">Professional Skills</h2>
+                <div class="box">
+                    <h4>Knowledge of HTML</h4>
+                    <div class="percent">
+                        <div style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>Knowledge of CSS</h4>
+                    <div class="percent">
+                        <div style="width: 60%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>Basics of JAVASCRIPT</h4>
+                    <div class="percent">
+                        <div style="width: 30%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>Adept with C and C++</h4>
+                    <div class="percent">
+                        <div style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>Basics of JAVA</h4>
+                    <div class="percent">
+                        <div style="width: 70%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>Adept with PYTHON</h4>
+                    <div class="percent">
+                        <div style="width: 70%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="About Interests">
+                <h2 class="title2">Interests</h2>
+                <ul>
+                    <li>Travelling <i class="fa fa-plane" aria-hidden="true"></i></li>
+                    <li>Exploring<i class="fa fa-headphones" aria-hidden="true"></i></li>
+                    <li>Painting <i class="fa fa-film" aria-hidden="true"></i></li>
+                    <li>yogic exercice<i class="fa fa-cutlery" aria-hidden="true"></i></li>
+
+                </ul>
+            </div>
+            <div class="Career Objective">
+                <h2 class="title2">Career Objective</h2>
+                <p>To perform and utilizing my skills and knowledge in a manner which will lead to the successful growth of the organisation and which also land me a successful career.
+                  
+                </p>
+                 
+                    
+               
+                
+            </div>
+        </div>
+    </div>    
+</body>
+
+</html>
